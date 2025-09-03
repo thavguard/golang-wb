@@ -17,13 +17,13 @@ func main() {
 		if hasAnogram, ok := annMap[currentAnogram]; !ok {
 			annMap[currentAnogram] = i
 		} else {
-			m[hasAnogram] = append(m[hasAnogram], i)
+			if _, ok := m[hasAnogram]; ok {
+				m[hasAnogram] = append(m[hasAnogram], i)
+			} else {
+				m[hasAnogram] = []string{hasAnogram, i}
+			}
 		}
 
-	}
-
-	for k, v := range m {
-		m[k] = append(v, k)
 	}
 
 	fmt.Printf("annMap: %v\n", len(annMap))
