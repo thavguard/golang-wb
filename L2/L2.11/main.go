@@ -22,6 +22,10 @@ func main() {
 
 	}
 
+	for k, v := range m {
+		m[k] = append(v, k)
+	}
+
 	fmt.Printf("annMap: %v\n", len(annMap))
 	fmt.Printf("m: %v\n", m)
 
