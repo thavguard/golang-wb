@@ -1,0 +1,7 @@
+Hello world
+Go is awesome
+GREPed utility test
+Another line with Go
+No match here
+Test line for grep
+Go again!
